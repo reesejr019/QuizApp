@@ -24,7 +24,7 @@ export default function Question({ route, navigation }) {
   }
 
   return (
-    <ScrollView contentContainerStyle={styles.container}>
+    <ScrollView style={styles.scrollView} contentContainerStyle={styles.container}>
       <Text style={styles.counter}>
         Question {index + 1} of {data.length}
       </Text>
@@ -57,6 +57,9 @@ export default function Question({ route, navigation }) {
 }
 
 const styles = StyleSheet.create({
+  scrollView: {
+    flex: 1,
+  },
   container: {
     padding: 20,
     flexGrow: 1,

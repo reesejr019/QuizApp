@@ -26,7 +26,7 @@ export default function Summary({ route }) {
   }, 0);
 
   return (
-    <ScrollView contentContainerStyle={styles.container}>
+    <ScrollView style={styles.scrollView} contentContainerStyle={styles.container}>
       <Text testID="total" style={styles.score}>
         Score: {score} / {data.length}
       </Text>
@@ -66,6 +66,9 @@ export default function Summary({ route }) {
 }
 
 const styles = StyleSheet.create({
+  scrollView: {
+    flex: 1,
+  },
   container: {
     padding: 20,
     backgroundColor: '#fff',
